@@ -40,3 +40,5 @@ Programming style
 			- handles logic
 		- draw
 			- handles GUI
+- scaling
+	- handle scaling only in GUI, never in logic

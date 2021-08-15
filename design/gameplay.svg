@@ -24,15 +24,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.74118968"
-     inkscape:cx="352.81117"
-     inkscape:cy="200.35357"
+     inkscape:zoom="1.0482005"
+     inkscape:cx="466.03679"
+     inkscape:cy="369.68118"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -108,8 +108,7 @@
      id="layer2"
      inkscape:label="Pool Table"
      transform="translate(-53.950306,-82.862343)"
-     style="display:inline;opacity:1"
-     sodipodi:insensitive="true">
+     style="display:inline;opacity:1">
     <rect
        style="fill:#495867;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect5752"
@@ -183,7 +182,8 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Pool"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <circle
        style="fill:#f7f7ff;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="path18454"

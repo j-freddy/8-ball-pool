@@ -16,6 +16,14 @@ class Vector {
 		return Math.sqrt(this.x ** 2 + this.y ** 2);
 	}
 
+	flipX() {
+		this.x *= -1;
+	}
+
+	flipY() {
+		this.y *= -1;
+	}
+
 	add(vector) {
 		this.x += vector.x;
 		this.y += vector.y;
