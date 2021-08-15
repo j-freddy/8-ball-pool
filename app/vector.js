@@ -21,9 +21,22 @@ class Vector {
 		this.y += vector.y;
 	}
 
+	subtract(vector) {
+		this.x -= vector.x;
+		this.y -= vector.y;
+	}
+
 	scale(factor) {
 		this.x *= factor;
 		this.y *= factor;
+	}
+
+	static add(v1, v2) {
+		return new Vector(v1.x + v2.x, v1.y + v2.y);
+	}
+
+	static subtract(v1, v2) {
+		return new Vector(v1.x - v2.x, v1.y - v2.y);
 	}
 
 	static scale(vector, factor) {

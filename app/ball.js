@@ -9,7 +9,7 @@ class Ball {
 	constructor(pos, colour="#000") {
 		this.colour = colour;
 		this.pos = pos;
-		this.velocity = new Vector(3, 4);
+		this.velocity = new Vector(0, 0);
 	}
 
 	get x() {
@@ -25,8 +25,6 @@ class Ball {
 	}
 
 	update(scale=1) {
-		console.log(this.speed);
-
 		this.pos.add(Vector.scale(this.velocity, scale));
 		this.velocity.scale(this.friction);
 

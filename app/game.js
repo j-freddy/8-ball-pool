@@ -1,12 +1,15 @@
 class Game {
+	scale = 1;
+	cuePower = 0.02;
 	cueBall;
 
 	constructor() {
-		this.cueBall = new CueBall(new Vector(280, 250));
+		this.cueBall = new CueBall(new Vector(0, 0));
+		this.startEventHandlers();
 	}
 
 	update() {
-		this.cueBall.update();
+		this.cueBall.update(this.scale);
 	}
 
 	draw() {
@@ -17,6 +20,18 @@ class Game {
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 		ctx.restore();
 
-		this.cueBall.draw();
+		this.cueBall.draw(this.scale);
+	}
+
+	startEventHandlers() {
+		canvas.addEventListener("click", (e) => {
+			let cursorPos = new Vector(e.offsetX, e.offsetY);
+			this.cueBall.shoot(
+				Vector.scale(
+					Vector.subtract(cursorPos, this.cueBall.pos),
+					this.cuePower / this.scale
+				)
+			);
+		});
 	}
 }
