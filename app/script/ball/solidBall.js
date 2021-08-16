@@ -1,5 +1,5 @@
 class SolidBall extends Ball {
   constructor(x, y) {
-    super(x, y, "#577399");
+    super(x, y, data.solidBall.colour);
   }
 }

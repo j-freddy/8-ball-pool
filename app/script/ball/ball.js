@@ -1,7 +1,7 @@
 class Ball {
-  radius = 13.5;
-  friction = 0.985; // friction coefficient, 1 = smooth, 0 = sticky
-  minSpeed = 0.1;
+  radius = data.ball.radius;
+  friction = data.ball.friction;
+  minSpeed = data.ball.minSpeed;
   colour;
   pos;
   velocity;

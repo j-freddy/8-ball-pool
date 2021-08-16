@@ -1,6 +1,6 @@
 class CueBall extends Ball {
   constructor(x, y) {
-    super(x, y, "#f7f7ff");
+    super(x, y, data.cueBall.colour);
   }
 
   shoot(velocity) {

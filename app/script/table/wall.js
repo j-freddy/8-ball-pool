@@ -27,7 +27,7 @@ class Wall {
 
   draw(scale=1) {
     ctx.save();
-    ctx.fillStyle = "#577399";
+    ctx.fillStyle = data.wall.colour;
     ctx.fillRect(this.x*scale, this.y*scale, this.width*scale,
                  this.height*scale);
     ctx.restore();

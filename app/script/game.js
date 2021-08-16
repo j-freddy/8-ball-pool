@@ -1,6 +1,6 @@
 class Game {
-  scale = canvas.height / 450;
-  cuePower = 0.04;
+  scale = data.game.scale;
+  cuePower = 0.1;
   table;
   cueBall;
 
