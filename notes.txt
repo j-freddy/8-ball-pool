@@ -9,9 +9,9 @@ Gameplay
 --------------------------------------------------------------------------------
 - 2 players
 - 15 balls to pot
-	- 7 red* balls, 7 blue* balls
-	- 1 black ball
-		- this is the 8 ball
+  - 7 red* balls, 7 blue* balls
+  - 1 black ball
+    - this is the 8 ball
 
 *colours can be customisable
 
@@ -31,14 +31,14 @@ fe5f55
 Programming style
 --------------------------------------------------------------------------------
 - classes and objects
-	- declare all properties outside the constructor
-	- assign constants outside the constructor
-	- assign object references inside the constructor
-	- assign all other properties inside the constructor
-	- each object has 2 methods that are called each frame/tick while active
-		- update
-			- handles logic
-		- draw
-			- handles GUI
+  - declare all properties outside the constructor
+  - assign constants outside the constructor
+  - assign object references inside the constructor
+  - assign all other properties inside the constructor
+  - each object has 2 methods that are called each frame/tick while active
+    - update
+      - handles logic
+    - draw
+      - handles GUI
 - scaling
-	- handle scaling only in GUI, never in logic
+  - handle scaling only in GUI, never in logic

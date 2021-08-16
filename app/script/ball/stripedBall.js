@@ -1,5 +1,5 @@
 class StripedBall extends Ball {
-	constructor(x, y) {
-		super(x, y, "#fe5f55");
-	}
+  constructor(x, y) {
+    super(x, y, "#fe5f55");
+  }
 }
