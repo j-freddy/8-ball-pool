@@ -16,6 +16,14 @@ class Vector {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
 
+  asUnitVector() {
+    return Vector.scale(this, 1 / this.magnitude);
+  }
+
+  distanceFrom(vector) {
+    return Vector.subtract(this, vector).magnitude;
+  }
+
   flipX() {
     this.x *= -1;
   }
@@ -34,6 +42,11 @@ class Vector {
     this.y -= vector.y;
   }
 
+  mult(vector) {
+    this.x *= vector.x;
+    this.y *= vector.y;
+  }
+
   scale(factor) {
     this.x *= factor;
     this.y *= factor;
@@ -47,7 +60,15 @@ class Vector {
     return new Vector(v1.x - v2.x, v1.y - v2.y);
   }
 
+  static mult(v1, v2) {
+    return new Vector(v1.x * v2.x, v1.y * v2.y);
+  }
+
   static scale(vector, factor) {
     return new Vector(vector.x * factor, vector.y * factor);
+  }
+
+  static dotProduct(v1, v2) {
+    return v1.x*v2.x + v1.y*v2.y;
   }
 }

@@ -1,17 +1,27 @@
 class Game {
   scale = data.game.scale;
-  cuePower = 0.1;
+  cuePower = 0.04;
   table;
   cueBall;
+  objectBalls;
 
   constructor() {
     this.table = new Table();
     this.cueBall = new CueBall(300, 300);
+    this.objectBalls = [
+      new SolidBall(200, 200),
+      new StripedBall(400, 70)
+    ];
     this.startEventHandlers();
   }
 
+  get balls() {
+    return [this.cueBall].concat(this.objectBalls);
+  }
+
   update() {
-    this.cueBall.update(this.table.walls);
+    this.balls.forEach(ball => { ball.update(this.table.walls, this.balls); });
+    this.balls.forEach(ball => { ball.move(); });
   }
 
   draw() {
@@ -22,7 +32,7 @@ class Game {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.restore();
 
-    this.cueBall.draw(this.scale);
+    this.balls.forEach(ball => { ball.draw(this.scale); });
     this.table.draw(this.scale);
   }
 

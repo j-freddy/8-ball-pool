@@ -7,7 +7,7 @@ const data = {
   },
   ball: {
     radius: 13.5,
-    friction: 0.985, // friction coefficient, 1 = smooth, 0 = sticky
+    friction: 0.99, // friction coefficient, 1 = smooth, 0 = sticky
     minSpeed: 0.1
   },
   cueBall: {

@@ -28,8 +28,24 @@ class Ball {
     this.pos.y = y;
   }
 
+  get diameter() {
+    return this.radius*2;
+  }
+
   get speed() {
     return this.velocity.magnitude;
+  }
+
+  isTouchingBall(ball) {
+    return this.pos.distanceFrom(ball.pos) < this.diameter;
+  }
+
+  removeBallOverlap(ball) {
+    let delta = Vector.subtract(ball.pos, this.pos);
+    let posChange = Vector.scale(delta, (this.diameter - delta.magnitude) / delta.magnitude * 0.5);
+
+    this.pos.subtract(posChange);
+    ball.pos.add(posChange);
   }
 
   handleWallCollision(walls) {
@@ -37,52 +53,77 @@ class Ball {
       // Commented for "RIGHT" but same idea for other directions
       if (wall.bounceDirection == "RIGHT") {
         // Check if ball has collided with wall
-        if (this.x - this.radius < wall.x + wall.width) {
+        if (this.x < this.radius + wall.x + wall.width) {
           // Move ball out of wall
-          while (this.x - this.radius < wall.x + wall.width) {
-            this.x++;
-          }
+          this.x = this.radius + wall.x + wall.width;
           // Change ball direction
           this.velocity.flipX();
-          // Record collision
         }
       } else if (wall.bounceDirection == "DOWN") {
-        if (this.y - this.radius < wall.y + wall.height) {
-          while (this.y - this.radius < wall.y + wall.height) {
-            this.y++;
-          }
-
+        if (this.y < this.radius + wall.y + wall.height) {
+          this.y = this.radius + wall.y + wall.height;
           this.velocity.flipY();
         }
       } else if (wall.bounceDirection == "LEFT") {
-        if (this.x + this.radius > wall.x) {
-          while (this.x + this.radius > wall.x) {
-            this.x--;
-          }
-
+        if (this.x > wall.x - this.radius) {
+          this.x = wall.x - this.radius
           this.velocity.flipX();
         }
       } else if (wall.bounceDirection == "UP") {
-        if (this.y + this.radius > wall.y) {
-          while (this.y + this.radius > wall.y) {
-            this.y--;
-          }
-
+        if (this.y > wall.y - this.radius) {
+          this.y = wall.y - this.radius
           this.velocity.flipY();
         }
       }
     });
   }
 
-  update(walls) {
-    this.handleWallCollision(walls);
+  handleBallCollision(balls) {
+    balls.forEach(ball => {
+      if (ball !== this) {
+        if (this.isTouchingBall(ball)) {
+          this.removeBallOverlap(ball);
 
-    this.pos.add(this.velocity);
+          // Adapted from https://www.vobarian.com/collisions/2dcollisions2.pdf
+
+          let unitNormal = Vector.subtract(ball.pos, this.pos).asUnitVector();
+          let unitTangent = new Vector(-unitNormal.y, unitNormal.x);
+
+          let meDotNormal = Vector.dotProduct(unitNormal, this.velocity);
+          let meDotTangent = Vector.dotProduct(unitTangent, this.velocity);
+          let otherDotNormal = Vector.dotProduct(unitNormal, ball.velocity);
+          let otherDotTangent = Vector.dotProduct(unitTangent, ball.velocity);
+
+          this.velocity
+            = Vector.add(
+                Vector.scale(unitNormal, otherDotNormal),
+                Vector.scale(unitTangent, meDotTangent)
+              );
+
+          ball.velocity
+            = Vector.add(
+                Vector.scale(unitNormal, meDotNormal),
+                Vector.scale(unitTangent, otherDotTangent)
+              );
+        }
+      }
+    });
+  }
+
+  // Do not change ball positions in update
+  update(walls, balls) {
+    this.handleWallCollision(walls);
+    this.handleBallCollision(balls);
+
     this.velocity.scale(this.friction);
 
     if (this.speed < this.minSpeed) {
       this.velocity = new Vector(0, 0);
     }
+  }
+
+  move() {
+    this.pos.add(this.velocity);
   }
 
   draw(scale=1) {
