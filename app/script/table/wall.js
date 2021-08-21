@@ -25,6 +25,28 @@ class Wall {
     return this.dimension.y;
   }
 
+  isCollideWithBall(ball) {
+    // Adapted from
+    // http://jeffreythompson.org/collision-detection/circle-rect.php
+
+    let cornerPos = ball.pos.copy();
+
+    if (ball.x < this.x) {
+      cornerPos.x = this.x;
+    } else if (ball.x > this.x + this.width) {
+      cornerPos.x = this.x + this.width;
+    }
+
+    if (ball.y < this.y) {
+      cornerPos.y = this.y;
+    } else if (ball.y > this.y + this.height) {
+      cornerPos.y = this.y + this.height;
+    }
+
+    let delta = Vector.subtract(ball.pos, cornerPos);
+    return delta.magnitude <= ball.radius;
+  }
+
   draw(scale=1) {
     ctx.save();
     ctx.fillStyle = data.wall.colour;

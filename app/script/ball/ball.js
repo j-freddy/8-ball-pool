@@ -49,28 +49,29 @@ class Ball {
   }
 
   handleWallCollision(walls) {
+
     walls.forEach(wall => {
       // Commented for "RIGHT" but same idea for other directions
       if (wall.bounceDirection == "RIGHT") {
         // Check if ball has collided with wall
-        if (this.x < this.radius + wall.x + wall.width) {
+        if (wall.isCollideWithBall(this)) {
           // Move ball out of wall
           this.x = this.radius + wall.x + wall.width;
           // Change ball direction
           this.velocity.flipX();
         }
       } else if (wall.bounceDirection == "DOWN") {
-        if (this.y < this.radius + wall.y + wall.height) {
+        if (wall.isCollideWithBall(this)) {
           this.y = this.radius + wall.y + wall.height;
           this.velocity.flipY();
         }
       } else if (wall.bounceDirection == "LEFT") {
-        if (this.x > wall.x - this.radius) {
+        if (wall.isCollideWithBall(this)) {
           this.x = wall.x - this.radius
           this.velocity.flipX();
         }
       } else if (wall.bounceDirection == "UP") {
-        if (this.y > wall.y - this.radius) {
+        if (wall.isCollideWithBall(this)) {
           this.y = wall.y - this.radius
           this.velocity.flipY();
         }
@@ -84,7 +85,8 @@ class Ball {
         if (this.isTouchingBall(ball)) {
           this.removeBallOverlap(ball);
 
-          // Adapted from https://www.vobarian.com/collisions/2dcollisions2.pdf
+          // Adapted from
+          // https://www.vobarian.com/collisions/2dcollisions2.pdf
 
           let unitNormal = Vector.subtract(ball.pos, this.pos).asUnitVector();
           let unitTangent = new Vector(-unitNormal.y, unitNormal.x);
