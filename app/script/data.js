@@ -34,6 +34,15 @@ const data = {
     colour: "#000"
   },
   wall: {
+    properties: [
+      // [bounceDirection, x, y, width, height]
+      ["RIGHT", 27, 50, 6, 350],
+      ["DOWN", 50, 27, 275, 6],
+      ["DOWN", 362, 27, 275, 6],
+      ["LEFT", 654, 50, 6, 350],
+      ["UP", 50, 417, 275, 6],
+      ["UP", 362, 417, 275, 6]
+    ],
     colour: "#577399"
   },
   hole: {

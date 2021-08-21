@@ -3,13 +3,18 @@ class Table {
   holes;
 
   constructor() {
-    this.walls = [
-      new Wall("RIGHT", 30, 30, 6, 390),
-      new Wall("DOWN", 30, 30, 627, 6),
-      new Wall("LEFT", 651, 30, 6, 390),
-      new Wall("UP", 30, 414, 627, 6),
-    ];
+    this.walls = this.createWalls();
     this.holes = this.createHoles();
+  }
+
+  createWalls() {
+    let walls = [];
+
+    data.wall.properties.forEach(props => {
+      walls.push(new Wall(props[0], props[1], props[2], props[3], props[4]));
+    });
+
+    return walls;
   }
 
   createHoles() {

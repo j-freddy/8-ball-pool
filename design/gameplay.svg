@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="1.4823794"
-     inkscape:cx="328.18859"
-     inkscape:cy="193.94496"
+     inkscape:zoom="1.0482005"
+     inkscape:cx="345.83078"
+     inkscape:cy="170.29185"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -120,18 +120,18 @@
     <rect
        style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect14123"
-       width="165.89375"
-       height="103.1875"
-       x="61.88781"
-       y="90.799835"
+       width="167.48126"
+       height="104.775"
+       x="61.094055"
+       y="90.006096"
        ry="0" />
     <rect
        style="fill:#bdd5ea;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect10813"
-       width="162.71875"
-       height="100.0125"
-       x="63.475311"
-       y="92.387337"
+       width="164.30624"
+       height="101.6"
+       x="62.681557"
+       y="91.593582"
        ry="0" />
     <circle
        style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
@@ -177,6 +177,24 @@
        x="102.56747"
        y="90.799843"
        ry="0" />
+    <rect
+       style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.40001;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect977"
+       width="1.5875001"
+       height="72.760414"
+       x="90.006096"
+       y="-139.9399"
+       ry="0"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.40001;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       id="rect1204"
+       width="1.5875001"
+       height="72.760414"
+       x="-194.7811"
+       y="149.72948"
+       ry="0"
+       transform="rotate(-90)" />
   </g>
   <g
      inkscape:groupmode="layer"
