@@ -25,14 +25,14 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="1.4823794"
-     inkscape:cx="486.71752"
-     inkscape:cy="223.62697"
+     inkscape:cx="328.18859"
+     inkscape:cy="193.94496"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer2"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -108,8 +108,7 @@
      id="layer2"
      inkscape:label="Pool Table"
      transform="translate(-53.950306,-82.862343)"
-     style="display:inline;opacity:1"
-     sodipodi:insensitive="true">
+     style="display:inline;opacity:1">
     <rect
        style="fill:#495867;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="rect5752"
@@ -183,7 +182,8 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Pool"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <ellipse
        style="fill:#f7f7ff;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
        id="path18454"
@@ -191,95 +191,98 @@
        cy="59.53125"
        rx="3.5718751"
        ry="3.5718753" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle19897"
-       cx="137.31876"
-       cy="63.10313"
-       r="3.5718751" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle19981"
-       cx="143.66882"
-       cy="59.531258"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20018"
-       cx="143.66882"
-       cy="66.675011"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle19983"
-       cx="150.01883"
-       cy="55.959377"
-       r="3.5718751" />
-    <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20020"
-       cx="150.01883"
-       cy="63.10313"
-       r="3.5718751" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20061"
-       cx="150.01883"
-       cy="70.246887"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle19985"
-       cx="156.36888"
-       cy="52.387508"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20053"
-       cx="156.36882"
-       cy="59.531258"
-       r="3.5718751" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20057"
-       cx="156.36882"
-       cy="66.675011"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20063"
-       cx="156.36882"
-       cy="73.818756"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle19987"
-       cx="162.71883"
-       cy="48.815624"
-       r="3.5718751" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20055"
-       cx="162.71881"
-       cy="55.959377"
-       r="3.5718751" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20059"
-       cx="162.71881"
-       cy="63.10313"
-       r="3.5718751" />
-    <circle
-       style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20065"
-       cx="162.71881"
-       cy="70.24688"
-       r="3.5718751" />
-    <circle
-       style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
-       id="circle20067"
-       cx="162.71881"
-       cy="77.39064"
-       r="3.5718751" />
+    <g
+       id="g966">
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle19897"
+         cx="133.74687"
+         cy="59.53125"
+         r="3.5718751" />
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle19981"
+         cx="140.09694"
+         cy="55.959377"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20018"
+         cx="140.09694"
+         cy="63.103127"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle19983"
+         cx="146.44695"
+         cy="52.387497"
+         r="3.5718751" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20020"
+         cx="146.44695"
+         cy="59.53125"
+         r="3.5718751" />
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20061"
+         cx="146.44695"
+         cy="66.675003"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle19985"
+         cx="152.797"
+         cy="48.815628"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20053"
+         cx="152.79694"
+         cy="55.959377"
+         r="3.5718751" />
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20057"
+         cx="152.79694"
+         cy="63.103127"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20063"
+         cx="152.79694"
+         cy="70.246872"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle19987"
+         cx="159.14694"
+         cy="45.243744"
+         r="3.5718751" />
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20055"
+         cx="159.14693"
+         cy="52.387497"
+         r="3.5718751" />
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20059"
+         cx="159.14693"
+         cy="59.53125"
+         r="3.5718751" />
+      <circle
+         style="fill:#577399;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20065"
+         cx="159.14693"
+         cy="66.674995"
+         r="3.5718751" />
+      <circle
+         style="fill:#fe5f55;fill-opacity:1;stroke:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+         id="circle20067"
+         cx="159.14693"
+         cy="73.818756"
+         r="3.5718751" />
+    </g>
   </g>
 </svg>

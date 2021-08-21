@@ -21,8 +21,8 @@ const data = {
     eightBallIndex: 4
   },
   cueBall: {
-    colour: "#f7f7ff",
-    initialPos: [186.75, 225]
+    initialPos: [186.75, 225],
+    colour: "#f7f7ff"
   },
   solidBall: {
     colour: "#577399"
@@ -35,5 +35,12 @@ const data = {
   },
   wall: {
     colour: "#577399"
+  },
+  hole: {
+    radius: 18,
+    positions: [
+      [30, 30], [343.5, 30], [657, 30], [30, 420], [343.5, 420], [657, 420]
+    ],
+    colour: "#000"
   }
 }

@@ -1,5 +1,6 @@
 class Table {
   walls;
+  holes;
 
   constructor() {
     this.walls = [
@@ -8,6 +9,17 @@ class Table {
       new Wall("LEFT", 651, 30, 6, 390),
       new Wall("UP", 30, 414, 627, 6),
     ];
+    this.holes = this.createHoles();
+  }
+
+  createHoles() {
+    let holes = [];
+
+    data.hole.positions.forEach(pos => {
+      holes.push(new Hole(pos[0], pos[1]));
+    });
+
+    return holes;
   }
 
   drawSurface() {
@@ -22,6 +34,10 @@ class Table {
 
     this.walls.forEach(wall => {
       wall.draw(scale);
+    });
+
+    this.holes.forEach(hole => {
+      hole.draw(scale);
     });
   }
 }
