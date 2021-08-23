@@ -32,8 +32,9 @@ class Table {
   }
 
   draw(scale=1) {
-    this.drawSurface();
-    this.walls.forEach(wall => wall.draw(scale));
+    ctx.drawImage(img.tableFrame, 0, 0, canvas.width, canvas.height);
+    // this.drawSurface();
+    // this.walls.forEach(wall => wall.draw(scale));
     this.holes.forEach(hole => hole.draw(scale));
   }
 }
