@@ -50,6 +50,10 @@ class Game {
     return balls;
   }
 
+  areBallsStationary() {
+    return this.balls.filter(ball => ball.velocity.magnitude > 0) === 0;
+  }
+
   update() {
     this.balls.forEach(ball =>
       ball.update(this.table.walls, this.balls, this.table.holes));
