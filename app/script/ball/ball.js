@@ -5,11 +5,13 @@ class Ball {
   colour;
   pos;
   velocity;
+  potted;
 
   constructor(x, y, colour="#000") {
     this.colour = colour;
     this.pos = new Vector(x, y);
     this.velocity = new Vector(0, 0);
+    this.potted = false;
   }
 
   get x() {
@@ -38,6 +40,10 @@ class Ball {
 
   isTouchingBall(ball) {
     return this.pos.distanceFrom(ball.pos) < this.diameter;
+  }
+
+  isGoingInHole(hole) {
+    return this.pos.distanceFrom(hole.pos) < this.radius;
   }
 
   removeBallOverlap(ball) {
@@ -113,7 +119,13 @@ class Ball {
   }
 
   // Do not change ball positions in update
-  update(walls, balls) {
+  update(walls, balls, holes) {
+    holes.forEach(hole => {
+      if (this.isGoingInHole(hole)) {
+        this.potted = true;
+      }
+    });
+
     this.handleWallCollision(walls);
     this.handleBallCollision(balls);
 

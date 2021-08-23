@@ -51,15 +51,24 @@ class Game {
   }
 
   update() {
-    this.balls.forEach(ball => { ball.update(this.table.walls, this.balls); });
-    this.balls.forEach(ball => { ball.move(); });
+    this.balls.forEach(ball => {
+      ball.update(this.table.walls, this.balls, this.table.holes);
+    });
+
+    this.balls.forEach(ball => ball.move());
+
+    this.objectBalls = this.objectBalls.filter(ball => !ball.potted);
+
+    if (this.cueBall.potted) {
+      this.cueBall.reset();
+    }
   }
 
   draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     this.table.draw(this.scale);
-    this.balls.forEach(ball => { ball.draw(this.scale); });
+    this.balls.forEach(ball => ball.draw(this.scale));
   }
 
   startEventHandlers() {
