@@ -51,9 +51,8 @@ class Game {
   }
 
   update() {
-    this.balls.forEach(ball => {
-      ball.update(this.table.walls, this.balls, this.table.holes);
-    });
+    this.balls.forEach(ball =>
+      ball.update(this.table.walls, this.balls, this.table.holes));
 
     this.balls.forEach(ball => ball.move());
 

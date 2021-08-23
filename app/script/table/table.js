@@ -10,9 +10,8 @@ class Table {
   createWalls() {
     let walls = [];
 
-    data.wall.properties.forEach(props => {
-      walls.push(new Wall(props[0], props[1], props[2], props[3], props[4]));
-    });
+    data.wall.properties.forEach(props =>
+      walls.push(new Wall(props[0], props[1], props[2], props[3], props[4])));
 
     return walls;
   }
@@ -20,9 +19,7 @@ class Table {
   createHoles() {
     let holes = [];
 
-    data.hole.positions.forEach(pos => {
-      holes.push(new Hole(pos[0], pos[1]));
-    });
+    data.hole.positions.forEach(pos => holes.push(new Hole(pos[0], pos[1])));
 
     return holes;
   }
@@ -36,13 +33,7 @@ class Table {
 
   draw(scale=1) {
     this.drawSurface();
-
-    this.walls.forEach(wall => {
-      wall.draw(scale);
-    });
-
-    this.holes.forEach(hole => {
-      hole.draw(scale);
-    });
+    this.walls.forEach(wall => wall.draw(scale));
+    this.holes.forEach(hole => hole.draw(scale));
   }
 }
